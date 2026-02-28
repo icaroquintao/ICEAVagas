@@ -26,6 +26,7 @@ class CreateVagasTable extends Migration
             $table->string('status',10); // APROVADA PASSADA..
             $table->string('link',200); // LINK DE INSCRIÇÃO
             $table->unsignedBigInteger('user_id');
+             $table->date('join_at');
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users');
